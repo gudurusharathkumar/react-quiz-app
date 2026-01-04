@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 function Question({ questionData, onNext, currentQuestion }) {
   const [selectedOption, setSelectedOption] = useState(null);
 
-  // ✅ RESET selection when question changes
+  //  RESET selection when question changes
   useEffect(() => {
     setSelectedOption(null);
   }, [questionData]);
@@ -24,7 +24,7 @@ function Question({ questionData, onNext, currentQuestion }) {
         let backgroundColor = "#e0e0e0";
         let textColor = "#000";
 
-        // ✅ SHOW COLORS ONLY AFTER CLICK
+        //  SHOW COLORS ONLY AFTER CLICK
         if (selectedOption !== null) {
           if (index === questionData.answer) {
             backgroundColor = "green";
